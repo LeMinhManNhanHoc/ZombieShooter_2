@@ -2138,7 +2138,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   countDownText: {fileID: 5911714}
-  minutes: 1
+  minutes: 3
   seconds: 0
   miliseconds: 0
 --- !u!1001 &991154075
