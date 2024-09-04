@@ -53,6 +53,8 @@ MonoBehaviour:
   skinnedMeshRenderer: {fileID: 6297875882396197037}
   healthBarFiller: {fileID: 0}
   healthBarText: {fileID: 0}
+  reloadProgress: {fileID: 0}
+  bulletCounter: {fileID: 0}
 --- !u!114 &9142855487584703573
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -70,6 +72,7 @@ MonoBehaviour:
   baseCharacterData: {fileID: 11400000, guid: 6a134540e20c4044097cb01534a2a4da, type: 2}
   maxInviTime: 0.1
   characterController: {fileID: 942016199231091321}
+  currentGunController: {fileID: 0}
   weaponList:
   - {fileID: 745880549537089107}
   - {fileID: 6932930767899550984}
@@ -170,6 +173,10 @@ MonoBehaviour:
     amountToPool: 5
   vfxShoot: {fileID: 0}
   muzzleTransform: {fileID: 6528984468657171681}
+  clipSize: 10
+  reloadTime: 2
+  maxAmount: 5
+  grenadeCounter: {fileID: 0}
 --- !u!1 &3162829112090950168
 GameObject:
   m_ObjectHideFlags: 0
@@ -341,6 +348,8 @@ MonoBehaviour:
     amountToPool: 10
   vfxShoot: {fileID: 5033047723412385707}
   muzzleTransform: {fileID: 6893392640263705592}
+  clipSize: 10
+  reloadTime: 2
 --- !u!1001 &2536729917557160111
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -881,6 +890,8 @@ MonoBehaviour:
     amountToPool: 10
   vfxShoot: {fileID: 9187718028877788301}
   muzzleTransform: {fileID: 2556527298422184841}
+  clipSize: 10
+  reloadTime: 4
 --- !u!4 &7745460602666434482 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: d5392c162a071d84288b724cade9048b, type: 3}

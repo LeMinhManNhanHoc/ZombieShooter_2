@@ -11,8 +11,8 @@ public class BaseGunController : MonoBehaviour
     [SerializeField] protected Transform muzzleTransform;
 
     [SerializeField] protected int clipSize = 10;
+    [SerializeField] protected float reloadTime = 2f;
     protected int currentBulletInClip;
-    protected float reloadTime = 2f;
     protected float currentReloadTime;
     protected bool isReloading = false;
 

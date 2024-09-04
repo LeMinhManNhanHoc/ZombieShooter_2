@@ -8,11 +8,15 @@ public class SettingController : MonoBehaviour
     [SerializeField] Slider sfxSlider;
     [SerializeField] Slider bgmSlider;
 
+    private int targetFramerate;
+
     private void OnEnable()
     {
         UpdateSliderValue();
 
         Time.timeScale = 0f;
+
+        targetFramerate = PlayerPrefs.GetInt("TargetFPS", 60);
     }
 
     private void OnDisable()
@@ -51,6 +55,7 @@ public class SettingController : MonoBehaviour
 
     public void OnClickSave()
     {
+        PlayerPrefs.SetInt("TargetFPS", targetFramerate);
         PlayerPrefs.SetFloat("SFX", sfxSlider.value);
         PlayerPrefs.SetFloat("BGM", bgmSlider.value);
         PlayerPrefs.Save();
@@ -61,6 +66,7 @@ public class SettingController : MonoBehaviour
 
     public void OnCloseClick()
     {
+        Application.targetFrameRate = PlayerPrefs.GetInt("TargetFPS", 60);
         gameObject.SetActive(false);
     }
 
@@ -68,5 +74,19 @@ public class SettingController : MonoBehaviour
     {
         sfxSlider.value = PlayerPrefs.GetFloat("SFX", 0.5f);
         bgmSlider.value = PlayerPrefs.GetFloat("BGM", 0.5f);
+    }
+
+    public void OnClick30FPS()
+    {
+        targetFramerate = 30;
+
+        Application.targetFrameRate = targetFramerate;
+    }
+
+    public void OnClick60FPS()
+    {
+        targetFramerate = 60;
+
+        Application.targetFrameRate = targetFramerate;
     }
 }

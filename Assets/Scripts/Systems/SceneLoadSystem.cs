@@ -5,7 +5,7 @@ public class SceneLoadSystem : MonoSingleton<SceneLoadSystem>
 {
     protected override void Awake()
     {
-        Application.targetFrameRate = 60;
+        Application.targetFrameRate = PlayerPrefs.GetInt("TargetFPS", 60); ;
 
         base.Awake();
         DontDestroyOnLoad(this);
