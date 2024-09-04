@@ -1,3 +1,4 @@
+using MessageBusSystem;
 using System;
 using System.Collections;
 using UnityEngine;
@@ -31,6 +32,7 @@ public class TimeManager : MonoSingleton<TimeManager>
             if (seconds <= 0)
             {
                 minutes--;
+                MessageBus.Announce(MessageType.MINUTE_PASS, minutes);
                 seconds = 59;
             }
             else if (seconds >= 0)

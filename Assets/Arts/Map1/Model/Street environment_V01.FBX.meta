@@ -3,7 +3,62 @@ guid: 5d8323211dd16bc42bde842a0b683112
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 06 - Default
+    second: {fileID: 2100000, guid: 883a84210b147c640aa597c26ab07f68, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 09 - Default
+    second: {fileID: 2100000, guid: f3bc18090095e4f4c97e82ec514ddfe6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 20 - Default
+    second: {fileID: 2100000, guid: 2007421ada514c14aa900c981a7ddcec, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 20 - Defaulta
+    second: {fileID: 2100000, guid: a3ddeef055b9eb641a01992c0b68c5cf, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 21 - Default
+    second: {fileID: 2100000, guid: 9cfc407506fdbb849a5775b44058ae4b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 3db _ building 06
+    second: {fileID: 2100000, guid: 55b7189f84538b94580b23b400c0ee24, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Building_dnt
+    second: {fileID: 2100000, guid: 684d5e0a2fc1b0e45bc849a9e2acd5fa, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material #0
+    second: {fileID: 2100000, guid: fe3ad4adbd91f054f8a61d269636585a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: building_025
+    second: {fileID: 2100000, guid: 26be4e9be2002e043b4c0062bdc68e7a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: building_16
+    second: {fileID: 2100000, guid: 1d56150703c46c4478ff0ac15f6b0509, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: orig_orig_orig_17 - Default
+    second: {fileID: 2100000, guid: 29ad7f67049597043b236f25c0b1602c, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

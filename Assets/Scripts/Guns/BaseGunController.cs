@@ -106,6 +106,8 @@ public class BaseGunController : MonoBehaviour
 
     public void BeginReload()
     {
+        if (isReloading) return;
+
         currentBulletInClip = 0;
         currentReloadTime = 0f;
         SoundSystem.Instance.PlaySFX("Reload");

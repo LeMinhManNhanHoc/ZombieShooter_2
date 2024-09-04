@@ -5,6 +5,7 @@ namespace MessageBusSystem
         SHOOT,
         SHOOT_GRENADE,
         DONE_SHOOT,
+        MINUTE_PASS,
         NONE
     }
 }

@@ -31,6 +31,7 @@ public class EnemyController : CharacterBaseController
         targetController = target.GetComponent<CharacterBaseController>();
         
         agent.speed = characterData.MovementSpeed;
+        agent.isStopped = false;
     }
 
     protected override void OnDisable()
@@ -42,7 +43,11 @@ public class EnemyController : CharacterBaseController
     {
         base.Update();
 
-        if (CheckIsDead()) return;
+        if (CheckIsDead())
+        {
+            agent.isStopped = true;
+            return;
+        }
 
         UpdateAttackCoolDown();
 
@@ -54,6 +59,7 @@ public class EnemyController : CharacterBaseController
     public override void MoveCharacter()
     {
         if (deltaDistance <= 0.5f) return;
+
         agent.SetDestination(target.position);
     }
     protected override void UpdateCharacterMoveAnimation()

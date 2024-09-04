@@ -8,7 +8,7 @@ public class PlayerController : CharacterBaseController
     [SerializeField] protected CharacterController characterController;
     [SerializeField] protected BaseGunController currentGunController;
 
-    public float PlayerRemainHP { get { return characterData.CurrentHealth / characterData.MaxHealthPoint * 100f; } }
+    public float PlayerRemainHP { get { return (float)characterData.CurrentHealth / characterData.MaxHealthPoint * 100f; } }
 
     protected Vector3 moveDirection;
     protected Vector3 lookDirection;

@@ -12,13 +12,14 @@ public class ScoreManager : MonoSingleton<ScoreManager>
     private void Start()
     {
         killedZombies = 0;
-        scoreText.text = killedZombies.ToString();
+        if (scoreText != null) scoreText.text = killedZombies.ToString();
     }
 
     public void AddKilled()
     {
         killedZombies++;
-        scoreText.text = killedZombies.ToString();
+
+        if (scoreText != null) scoreText.text = killedZombies.ToString();
     }
 
     public int GetKilledZombie()

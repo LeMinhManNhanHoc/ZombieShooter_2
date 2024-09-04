@@ -36,8 +36,8 @@ public class VirtualJoystickController : MonoBehaviour, IDragHandler, IPointerDo
             touchPosition.x += joystickContainerPivot.x - pivot.x;
             touchPosition.y += joystickContainerPivot.y - pivot.y;
 
-            float x = Mathf.Clamp(touchPosition.x, -1f, 1f);
-            float y = Mathf.Clamp(touchPosition.y, -1f, 1f);
+            float x = Mathf.Clamp(touchPosition.x * 10f, -1f, 1f);
+            float y = Mathf.Clamp(touchPosition.y * 10f, -1f, 1f);
 
             joystickValue = new Vector2(x, y);
         }

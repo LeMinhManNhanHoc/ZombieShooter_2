@@ -20,11 +20,11 @@ RenderSettings:
   m_FogDensity: 0.01
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
-  m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
+  m_AmbientSkyColor: {r: 0, g: 0, b: 0, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
-  m_AmbientMode: 0
+  m_AmbientMode: 3
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
   m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
   m_HaloStrength: 0.5
@@ -361,6 +361,10 @@ MonoBehaviour:
     - Key: Reload
       Value: {fileID: 8300000, guid: bbdfcae3846db474bb35267dd0c2bac4, type: 3}
       index: 8
+      isKeyDuplicated: 0
+    - Key: BossAppear
+      Value: {fileID: 8300000, guid: f23210c1392b4894c9d5585a265ea98a, type: 3}
+      index: 9
       isKeyDuplicated: 0
   audioSource: {fileID: 72277779}
 --- !u!82 &72277779
@@ -824,11 +828,23 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 0
+  m_Interactable: 1
   m_TargetGraphic: {fileID: 268167577}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1620499357}
+        m_TargetAssemblyTypeName: MainMenuController, Assembly-CSharp
+        m_MethodName: OnLevelSelected
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &299028849
 GameObject:
   m_ObjectHideFlags: 0
@@ -2837,6 +2853,7 @@ GameObject:
   - component: {fileID: 2041142719}
   - component: {fileID: 2041142721}
   - component: {fileID: 2041142720}
+  - component: {fileID: 2041142722}
   m_Layer: 5
   m_Name: Panel
   m_TagString: Untagged
@@ -2876,8 +2893,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 2100000, guid: 0b1e78c23a5e5e44193ae7640704544d, type: 2}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.29411766, g: 0.29411766, b: 0.29411766, a: 0.78431374}
   m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2902,6 +2919,45 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2041142718}
   m_CullTransparentMesh: 1
+--- !u!114 &2041142722
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2041142718}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59a42ac5a1461514d9c4a8a694678017, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _color:
+    r: 1
+    g: 1
+    b: 1
+    a: 1
+  _editorFlipMode: 0
+  _buildFlipMode: 0
+  _intensity: 0.694
+  _multiplier: 0.15
+  _onBeginBlur:
+    m_PersistentCalls:
+      m_Calls: []
+    m_CallsDirty: 1
+  _onEndBlur:
+    m_PersistentCalls:
+      m_Calls: []
+    m_CallsDirty: 1
+  _onBlurChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_CallsDirty: 1
+  _material: {fileID: 0}
+  _colorId: 0
+  _flipXId: 0
+  _flipYId: 0
+  _intensityId: 0
+  _multiplierId: 0
 --- !u!1 &2055775174
 GameObject:
   m_ObjectHideFlags: 0
