@@ -23,12 +23,12 @@ public class PlayerController : CharacterBaseController
     {
         base.OnEnable();
         OnSwapWeapon(0);
-        MessageBus.Subsribe(MessageType.DONE_SHOOT, (data) => characterView.OnAttack());
+        MessageBus.Subsribe(MessageType.DONE_SHOOT, characterView.OnAttack);
     }
 
     protected override void OnDisable()
     {
-        MessageBus.Unsubscribe(MessageType.DONE_SHOOT, (data) => characterView.OnAttack());
+        MessageBus.Unsubscribe(MessageType.DONE_SHOOT, characterView.OnAttack);
     }
 
     public override void MoveCharacter()

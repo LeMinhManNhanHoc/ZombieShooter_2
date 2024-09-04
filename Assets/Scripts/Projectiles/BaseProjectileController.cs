@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class BaseProjectileController : MonoBehaviour
 {
-    [SerializeField] float bulletSpeed;
-    [SerializeField] float bulletDuration;
+    [SerializeField] protected int bulletDamage;
+    [SerializeField] protected float bulletSpeed;
+    [SerializeField] protected float bulletDuration;
     [SerializeField] TrailRenderer trailRenderer;
 
     WaitForSeconds coroutine;
@@ -42,7 +43,7 @@ public class BaseProjectileController : MonoBehaviour
     {
         if(collision.gameObject.CompareTag("Enemy"))
         {
-            collision.gameObject.GetComponent<EnemyController>().OnReceiveDamage(1);
+            collision.gameObject.GetComponent<EnemyController>().OnReceiveDamage(bulletDamage);
         }
 
         gameObject.SetActive(false);

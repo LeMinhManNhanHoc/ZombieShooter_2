@@ -52,7 +52,7 @@ public class Grenade : BaseProjectileController
 
         for (int i = 0; i < hits.Length; i++)
         {
-            hits[i].GetComponent<EnemyController>().OnReceiveDamage(1);
+            hits[i].GetComponent<EnemyController>().OnReceiveDamage(bulletDamage);
         }
     }
 }

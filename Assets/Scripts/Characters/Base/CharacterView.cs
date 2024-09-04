@@ -52,7 +52,7 @@ public class CharacterView : MonoBehaviour
         
     }
 
-    public void OnAttack()
+    public void OnAttack(object data)
     {
         myAnimator.SetTrigger(ATTACK);
     }

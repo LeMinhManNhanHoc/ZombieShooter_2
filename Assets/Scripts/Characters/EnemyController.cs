@@ -36,7 +36,7 @@ public class EnemyController : CharacterBaseController
 
     protected override void OnDisable()
     {
-        ScoreManager.Instance.AddKilled();
+        ScoreManager.Instance.AddScore(baseCharacterData.score);
     }
 
     protected override void Update()
@@ -85,7 +85,7 @@ public class EnemyController : CharacterBaseController
         if (!canAttack) return;
 
         characterData.OnAttack();
-        characterView.OnAttack();
+        characterView.OnAttack(null);
 
         currentAttackCoolDown = 0f;
         targetController.OnReceiveDamage(characterData.CurrentDamage);

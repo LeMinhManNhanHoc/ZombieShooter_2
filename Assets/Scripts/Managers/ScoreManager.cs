@@ -7,23 +7,19 @@ public class ScoreManager : MonoSingleton<ScoreManager>
 {
     [SerializeField] Text scoreText;
 
-    private int killedZombies;
+    private int scoreCounter;
+    public int ScoreCounter {  get { return scoreCounter; } }
 
     private void Start()
     {
-        killedZombies = 0;
-        if (scoreText != null) scoreText.text = killedZombies.ToString();
+        scoreCounter = 0;
+        if (scoreText != null) scoreText.text = scoreCounter.ToString();
     }
 
-    public void AddKilled()
+    public void AddScore(int score)
     {
-        killedZombies++;
+        scoreCounter += score;
 
-        if (scoreText != null) scoreText.text = killedZombies.ToString();
-    }
-
-    public int GetKilledZombie()
-    {
-        return killedZombies;
+        if (scoreText != null) scoreText.text = scoreCounter.ToString();
     }
 }

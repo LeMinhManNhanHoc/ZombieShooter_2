@@ -17,3 +17,4 @@ MonoBehaviour:
   MovementSpeed: 1
   RotateSpeed: 5
   Level: 1
+  score: 10

@@ -10,4 +10,5 @@ public class BaseCharacterData : ScriptableObject
     public float MovementSpeed;
     public float RotateSpeed;
     public int Level;
+    public int score;
 }
